@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+   /*font-size:0;*/
+}
+html{font-size:62.5%;}
+body{
+    height:100vh;
+    font-family: 'Lato',sans-serif;
+    overflow-x: hidden;
+}
+header{
+    z-index:10;
+    width: 100%;
+    min-height: 80px;
+    position: fixed;
+    padding:5px 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 0 #c4c4c4;
+}
+/*Menú*/
+header .logo{height: 80px;}
+header nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    font-size:1.63rem;
+}
+header ul li{
+    display:inline-block;
+    padding:7px 15px;
+}
+header ul li:hover{
+    box-shadow: 0 3px 0 rgb(6, 81, 145);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+header ul li a{
+    text-decoration: none;
+    color: #065191;
+}
+header .logo,header ul{display: inline-flex;}
+
+/*Estilos compartidos por todas las páginas*/
+h2{
+    font-size:3.7rem;
+    padding-top:2rem;
+    padding-bottom:2rem;
+}
+.subtitulo{
+    font-size:2.8rem;
+    padding:2rem 0;
+}
+section p,aside p{
+    font-size:1.8rem;
+    line-height: 1.5;
+}
+.contenido,section:not(.contenedorapertura){
+    max-width:1200px;
+    margin:auto;
+    padding: 5rem 2rem;
+}
+aside{padding: 6rem 0;}
+.bgdark{
+    background-color: #302f2e;
+    color: #fff;
+}
+.bglight{
+    background-color: #d6d6d6;
+}
+.azul{color: #065191;}
+.white{color: #fff;}
+
+.cta{
+    background-color: #1e72bc;
+    color: #fff;
+    width:90%;
+    max-width:320px;
+    border-radius: 5px;
+    margin:3rem auto;
+    padding:5px 10px;
+    font-size:1.6rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    border:0;
+    min-height: 45px;
+    cursor: pointer;
+    -webkit-transition:all 0.3s ease;
+    transition:all 0.3s ease;
+}
+.cta:hover,.cta:focus{background-color: #07477e;}
+
+
+/*Apertura Secciones (excepto Home)*/
+.aperturabg{
+  height: 500px;
+  width:100%;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+#quienessomos .aperturabg{
+    background-image: url('../assets/img/quienessomos.jpg');
+    background-position: center;
+    height:65vh;
+}
+#contacto .aperturabg{
+    background-image: url('../assets/img/contacto.jpg');
+    background-position: center -50px;
+    height:600px;
+}
+.aperturaintro{
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding:5rem 2rem;
+}
+.aperturaintro h1{
+    font-size:5em;
+    margin:0 auto 0.3em auto;
+}
+.aperturaintro h1 + p{font-size:2rem;margin:0 0 1.5rem 0;line-height: 1.35;}
+.aperturaintro div{width:95%;max-width:1200px;margin:auto;}
+
+/*Cols*/
+.col{
+    width:100%;
+    max-width:595px;
+    padding:3rem;
+}
+.col.areaimg{
+  padding:0;
+}
+.col.areaimg img{
+    width:100%;
+    max-width:100%;
+}
+.col.areaimg, .col.areatxt{flex-direction: column;}
+
+@media (min-width:768px) {
+    .cols{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    #quienessomos .cols{padding:0;}
+    .cols.inverse{
+        flex-direction: row-reverse;
+    }
+    .col{
+        width:50%;
+        max-width:595px;
+        display: inline-flex;
+        vertical-align: middle;
+        padding:3rem;
+    }
+}
+
+/*Footer*/
+footer{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+footer .col{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+footer p{
+    font-size:1.5rem;
+}
+.social{font-size:3rem;}
+footer .social{
+    text-align: right;
+    justify-content: flex-end;
+}
+.social a{color: inherit;}
+.social a:hover,
+.social a:focus{
+    color: #84c6ff;
+}
+.social .icon{padding:12px}
+
+/*Espacio*/
+.espacio{
+    height:5rem;
+}
