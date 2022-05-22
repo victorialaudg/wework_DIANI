@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../assets/ionicons-2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Up! Work - Quiénes somos</title>
@@ -26,29 +27,29 @@
         <section class="contenedorapertura">
             <div class="aperturabg"></div>
             <div class="aperturaintro">
-                <div>
+                <div data-aos="fade-up" data-aos-delay="200">
                     <h1>Quiénes somos</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui ultrices, aliquet felis eu, mattis tortor. Maecenas tincidunt iaculis feugiat. Vestibulum mattis magna sed sem lobortis, ut pellentesque ipsum convallis.</p>
                 </div>
             </div>
         </section>
-        <section>
+        <section data-aos="fade-up" data-aos-delay="500">
             <h2>Lorem ipsum</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id odio non est auctor gravida non ut nulla. Duis lacinia feugiat mollis. Sed congue justo sit amet sapien malesuada scelerisque. Praesent eu lobortis nulla, non rhoncus tellus. Praesent semper odio dictum tristique fringilla.</p>
         </section>
         <section class="cols">
-            <div class="col areaimg">
+            <div class="col areaimg" data-aos="fade-right" data-aos-delay="300">
                 <img src="../assets/img/quienessomos2.jpg" alt="imagen">
             </div>
-            <div class="col areatxt">
+            <div class="col areatxt" data-aos="fade-left" data-aos-delay="300">
                 <p>Sed mattis arcu non accumsan finibus. Vivamus finibus felis aliquet vehicula porta. Ut dictum vestibulum ante in condimentum. Pellentesque sed quam magna. Nullam volutpat elit ante, at gravida lorem dignissim nec. Praesent maximus vel mi varius interdum. Cras tincidunt metus vitae velit dictum, gravida consequat nisl dictum.</p>
             </div>
         </section>
         <section class="cols inverse">
-            <div class="col areaimg">
+            <div class="col areaimg" data-aos="fade-left" data-aos-delay="300">
                 <img src="../assets/img/quienessomos3.jpg" alt="imagen">
             </div>
-            <div class="col areatxt">
+            <div class="col areatxt" data-aos="fade-right" data-aos-delay="300">
                 <p>Suspendisse vitae ipsum velit. Suspendisse interdum elit in hendrerit hendrerit. Quisque placerat purus sit amet placerat blandit. Duis aliquam, massa vel sagittis euismod, nibh ex dictum eros, nec malesuada quam ipsum bibendum nisl. Mauris vestibulum nunc sed lectus cursus porta.</p>
             </div>
         </section>
@@ -65,5 +66,9 @@
             <a href="https://twitter.com" target="_blank"></a><i class="icon ion-social-twitter"></i></a>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

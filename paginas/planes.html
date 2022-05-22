@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../assets/ionicons-2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/planes.css">
@@ -27,17 +28,17 @@
         <section class="contenedorapertura">
             <div class="aperturabg"></div>
             <div class="aperturaintro">
-                <div>
+                <div data-aos="fade-up">
                     <h1>Planes</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui ultrices, aliquet felis eu, mattis tortor. Maecenas tincidunt iaculis feugiat. Vestibulum mattis magna sed sem lobortis, ut pellentesque ipsum convallis.</p>
                 </div>
             </div>
         </section>
-        <section>
+        <section data-aos="fade-up" data-aos-delay="200">
             <h2>Tenemos un plan a tu medida</h2>
             <p>Aliquam rhoncus viverra faucibus. Curabitur blandit rhoncus velit, vitae eleifend quam sagittis vitae. Nam quis facilisis nulla. Sed lobortis condimentum felis sit amet pharetra. Sed ultrices posuere finibus. Nullam tempor risus id elit commodo rutrum.</p>
             <br>
-            <table>
+            <table data-aos="fade-up" data-aos-delay="400">
                 <caption>Elegí el plan que mejor se adapte a vos</caption>
                 <thead>
                     <tr>
@@ -94,5 +95,9 @@
             <a href="https://twitter.com" target="_blank"></a><i class="icon ion-social-twitter"></i></a>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

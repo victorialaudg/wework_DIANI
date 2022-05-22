@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"> 
-    <!--<link rel="stylesheet" href="animate.min.css">-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/home.css">
     <title>Up! Work - Home</title>
@@ -30,15 +30,15 @@
                     <source src="assets/video/videoapertura.mp4" type="video/mp4">
                 </video>
                 <div class="apertura__text">
-                    <h1 class="animate__animated animate__bounce">Up! Work</h1>
+                    <h1>Up! Work</h1>
                     <h2>Tu lugar de coworking</h2>
                 </div>
             </div>
-            <div class="contenido">
+            <div class="contenido" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="bajada">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui ultrices, aliquet felis eu, mattis tortor. Maecenas tincidunt iaculis feugiat. Vestibulum mattis magna sed sem lobortis, ut pellentesque ipsum convallis.</h3>
             </div>
         </section>
-        <section class="oficinas bgdark">
+        <section class="oficinas bgdark" data-aos="fade-up" data-aos-delay="500">
             <h2>Nuestras oficinas</h2>
             <div class="galeria">
                 <img src="assets/img/ofi01.jpg" alt="oficina 1">
@@ -49,17 +49,17 @@
                 <img src="assets/img/ofi06.jpg" alt="oficina 6">
             </div>
         </section>
-        <section class="contenido">
+        <section class="contenido" data-aos="fade-up">
             <h2 class="azul">Un espacio pensado para vos</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui ultrices, aliquet felis eu, mattis tortor. Maecenas tincidunt iaculis feugiat. Vestibulum mattis magna sed sem lobortis, ut pellentesque ipsum convallis.</p>
             <a href="paginas/planes.html"><button type="button" class="cta">Ver planes</button></a>
         </section>
     </main>
     <aside class="bglight">
-        <div class="col areaimg">
+        <div class="col areaimg" data-aos="fade-right">
             <img src="assets/img/espacioparavos.jpg" alt="imagen">
         </div>
-        <div class="col areatxt">
+        <div class="col areatxt" data-aos="fade-left">
             <h2>Probá un día gratis</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui ultrices, aliquet felis eu, mattis tortor. Maecenas tincidunt iaculis feugiat. Vestibulum mattis magna sed sem lobortis, ut pellentesque ipsum convallis.</p>
             <a href="paginas/contacto.html"><button type="button" class="cta">¡Escribinos y probá!</button></a>
@@ -76,6 +76,9 @@
             <a href="https://twitter.com" target="_blank"><i class="icon ion-social-twitter"></i></a>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
