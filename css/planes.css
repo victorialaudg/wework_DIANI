@@ -1,4 +1,4 @@
-#servicios .aperturabg{
+#planes .aperturabg{
     background-image: url('../assets/img/planes.jpg');
     background-position: center;
     height:67vh;
@@ -36,6 +36,8 @@ table th,tfoot td{
 tfoot td{
     font-weight: bolder;
 }
+tfoot td .btn{font-size:1.5rem;text-transform: uppercase;padding:0.8rem 3rem;margin:1rem auto;}
+tfoot td .btn.btn-light:hover,tfoot td .btn.btn-light:focus{background-color: #222;color: #fff;}
 section:not(.contenedorapertura){text-align: center;padding:25px 10px;}
 
 table td:first-of-type,
@@ -50,3 +52,9 @@ table td:last-of-type,
 table th:last-of-type{
     background-color: #000;
 }
+#planes .accordion-header,.accordion-body,.accordion-button{background-color: #e7f1ff;}
+#planes .accordion-header .accordion-button{font-size:1.5rem;text-transform: uppercase;font-weight: bold;}
+#planes .accordion-button{box-shadow:0!important;}
+#planes .accordion-body{font-size:1.65rem;padding-bottom:2.5rem;}
+#planes .accordion-header h2{padding-top: 0;}
+#planes .accordion a{color: #065191;}
