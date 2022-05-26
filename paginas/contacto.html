@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../assets/ionicons-2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
@@ -13,15 +14,32 @@
 </head>
 <body id="contacto">
     <header>
-        <nav>
-            <a href="../index.html"><img src="../assets/img/logo.jpg" alt="logo" class="logo"></a>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="quienessomos.html">Quiénes somos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="planes.html">Planes</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.jpg" alt="logo" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quienessomos.html">Quiénes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="planes.html">Planes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -34,12 +52,12 @@
                 </div>
             </div>
         </section>
-        <section class="contenido" data-aos="fade-up" data-aos-delay="200">
+        <section class="contenido container-fluid" data-aos="fade-up" data-aos-delay="200">
             <h2>Escribinos</h2>
             <p>Aliquam rhoncus viverra faucibus. Curabitur blandit rhoncus velit, vitae eleifend quam sagittis vitae. Nam quis facilisis nulla. Sed lobortis condimentum felis sit amet pharetra. Sed ultrices posuere finibus. Nullam tempor risus id elit commodo rutrum.</p>
             <div class="espacio"></div>
-            <div class="cols">
-                <div class="col areaimg">
+            <div class="row">
+                <div class="col col-md-6 areaimg">
                     <img src="../assets/img/ofi01.jpg" alt="imagen">
                     <br>
                     <h3 class="subtitulo">Seguinos en nuestras redes</h3>
@@ -51,30 +69,32 @@
                         <a href="https://twitter.com" target="_blank"><i class="icon ion-social-twitter azul"></i></a>
                     </div>
                 </div>
-                <div class="col areatxt">
+                <div class="col col-md-6 areatxt">
                     <form action="validar.php" method="get" enctype="multipart/form-data">
                         <fieldset>
                             <legend>Completá con tus datos</legend>
-                            <div>
-                                <label for="nombre">Nombre:</label>
-                                <input type="text" id="nombre" name="nombre" placeholder="Sofía" minlength="3" maxlength="50" required autofocus autocomplete="off">
+                            <div class="row w100 mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Sofía" minlength="3" maxlength="50" required autofocus autocomplete="off">
                             </div>
-                            <div>
-                                <label for="apellido">Apellido:</label>
-                                <input type="text" id="apellido" name="apellido" placeholder="Benitez" minlength="3" maxlength="50" required>
+                            <div class="row w100 mb-3">
+                                <label for="apellido" class="form-label">Apellido:</label>
+                                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Benitez" minlength="3" maxlength="50" required>
                             </div>
-                            <div>
-                                <label for="email">E-mail:</label>
-                                <input type="email" id="email" name="email" placeholder="tumail@mail.com"  required>
+                            <div class="row d-flex flex-row mb-3">
+                                <div class="col-6"> 
+                                    <label for="email" class="form-label">E-mail:</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="tumail@mail.com"  required>
+                                </div>
+                                <div class="col-6">
+                                    <label for="telefono" class="form-label">Celular:</label>
+                                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="1177779999"  required>
+                                </div>
                             </div>
-                            <div>
-                                <label for="telefono">Celular:</label>
-                                <input type="tel" id="telefono" name="telefono" placeholder="1177779999"  required>
-                            </div>
-                            <div class="w100">
-                                <label for="pais">Tu país de residencia:</label>
-                                <select name="pais" id="pais">
-                                    <option value="argentina">Argentina</option>
+                            <div class="row mb-3 w100">
+                                <label for="pais" class="form-label">Tu país de residencia:</label>
+                                <select name="pais" id="pais" class="form-select">
+                                    <option value="argentina" selected>Argentina</option>
                                     <option value="bolivia">Bolivia</option>
                                     <option value="brasil">Brasil</option>
                                     <option value="chile">Chile</option>
@@ -82,21 +102,26 @@
                                     <option value="uruguay">Uruguay</option>
                                 </select>
                             </div>
-                            <div>
+                            <div class="row mb-3">
                                 <p>¿Cómo preferís que te contactemos?</p>
-                                <label for="tel">Teléfono
-                                    <input type="radio" name="mediocontacto" value="Teléfono" id="tel" checked required>
-                                </label>
-
-                                <label for="mail">E-mail
-                                    <input type="radio" name="mediocontacto" value="E-mail" id="mail" required>
-                                </label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="telefono">
+                                    <label class="form-check-label" for="rediotel">
+                                      Teléfono
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioemail" checked>
+                                    <label class="form-check-label" for="radioemail">
+                                      E-mail
+                                    </label>
+                                </div>
                             </div>
-                            <div class="w100">
-                                <label for="comentario">Tipeá el motivo de tu consulta:</label><br />
-                                <textarea name="comentario" id="comentario" cols="30" rows="5" placeholder="Escribí aquí..."></textarea><br>
+                            <div class="row mb-3 w100">
+                                <label for="comentario" class="form-label">Tipeá el motivo de tu consulta:</label><br />
+                                <textarea name="comentario" class="form-control" id="comentario" cols="30" rows="5" placeholder="Escribí aquí..."></textarea><br>
                             </div>
-                            <div class="w100">
+                            <div class="row mb-3 w100">
                                 <input id="limpiar" type="reset" value="Borrar">
                                 <input id="enviar" type="submit" value="Enviar">
                             </div>
@@ -105,27 +130,30 @@
                 </div>
             </div>
         </section>
-        <section class="cols inverse" data-aos="fade-up" data-aos-delay="200">
-            <div class="col areatxt">
+        <section class="areamapa d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
+            <div class="col col-md-6 areatxt">
                 <h2>Visitanos en nuestra sede principal</h2>
                 <p>Suspendisse vitae ipsum velit. Suspendisse interdum elit in hendrerit hendrerit.</p>
             </div>
-            <div class="col areaimg">
+            <div class="col col-md-6 areaimg">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.557228062503!2d-58.46349168449963!3d-34.564764462945604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5d5c374b20b%3A0xb13b9f9ab58e8aee!2sAv.%20Cr%C3%A1mer%20%26%20Juramento%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1650785355425!5m2!1ses-419!2sar" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
     <footer class="bgdark">
-        <div class="col rights">
-            <p>Todos los derechos reservados.</p>
-        </div>
-        <div class="col social">
-            <!--Nota: Dejé los links directos a las redes porque son cuentas inexistentes-->
-            <a href="https://www.linkedin.com" target="_blank"><i class="icon ion-social-linkedin"></i></a>
-            <a href="https://es-la.facebook.com" target="_blank"></a><i class="icon ion-social-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank"></a><i class="icon ion-social-twitter"></i></a>
+        <div class="cols d-flex flex-column flex-sm-row">
+            <div class="rights col-12 col-sm-6">
+                <p>Todos los derechos reservados.</p>
+            </div>
+            <div class="social col-12 col-sm-6">
+                <!--Nota: Dejé los links directos a las redes porque son cuentas inexistentes-->
+                <a href="https://www.linkedin.com" target="_blank"><i class="icon ion-social-linkedin"></i></a>
+                <a href="https://es-la.facebook.com" target="_blank"><i class="icon ion-social-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="icon ion-social-twitter"></i></a>
+            </div>
         </div>
     </footer>
+    <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

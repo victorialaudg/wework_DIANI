@@ -6,6 +6,8 @@
    /*font-size:0;*/
 }
 html{font-size:62.5%;}
+.container-fluid{padding-left: 0;padding-right: 0;}
+.row{padding-left: .5rem;padding-right:.5rem;}
 body{
     height:100vh;
     font-family: 'Lato',sans-serif;
@@ -51,7 +53,8 @@ header nav{
 header ul li{
     display:inline-block;
     padding:7px 15px;
-    position: relative;;
+    position: relative;
+    font-size:1.1em;
 }
 header ul li:after{
     content:'';
@@ -72,9 +75,17 @@ header ul li a{
     text-decoration: none;
     color: #065191;
 }
+
 header .logo,header ul{display: inline-flex;}
+.navbar-toggler{font-size:1.35em;}
+header .navbar-nav .nav-link:hover{color: #000;}
+header .navbar-nav .nav-link.active,header .navbar-nav .nav-link:focus{color: #065191;}
+header .navbar-collapse.collapse.show ul li:after{
+    transform-origin: left;
+}
 
 /*Estilos compartidos por todas las páginas*/
+h1,h2,h3,h4,h5,h6{font-weight: bold;}
 h2{
     font-size:3.7rem;
     padding-top:2rem;
@@ -154,34 +165,34 @@ aside{padding: 6rem 0;}
 .aperturaintro h1 + p{font-size:2rem;margin:0 0 1.5rem 0;line-height: 1.35;}
 .aperturaintro div{width:95%;max-width:1200px;margin:auto;}
 
-/*Cols*/
-.col{
+/*Cols Quiénes somos*/
+#quienessomos .cuadros .col{
     width:100%;
     max-width:595px;
     padding:3rem;
 }
-.col.areaimg{
+#quienessomos .cuadros .col.areaimg{
   padding:0;
 }
-.col.areaimg img{
+#quienessomos .cuadros .col.areaimg img{
     width:100%;
     max-width:100%;
 }
-.col.areaimg, .col.areatxt{flex-direction: column;}
+#quienessomos .cuadros .col.areaimg, #quienessomos .cuadros .col.areatxt{flex-direction: column;}
 
 @media (min-width:768px) {
-    .cols{
+    #quienessomos .cuadros.cols{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
     }
-    #quienessomos .cols{padding:0;}
-    .cols.inverse{
+    #quienessomos .cuadros.cols{padding:0;}
+    #quienessomos .cuadros.cols.inverse{
         flex-direction: row-reverse;
     }
-    .col{
-        width:50%;
+    #quienessomos .cuadros .col{
+        width:49.5%;
         max-width:595px;
         display: inline-flex;
         vertical-align: middle;
@@ -190,7 +201,19 @@ aside{padding: 6rem 0;}
 }
 
 /*Footer*/
-footer{
+footer{padding:1.5rem 1rem;text-align: center;}
+footer p{font-size:1.5rem;margin:0;}
+footer .icon{margin: 1rem;}
+.social{font-size:3rem;}
+.social a{color: inherit;}
+.social a:hover, .social a:focus{color: #84c6ff !important;}
+@media screen and (min-width:526px){
+    footer .rights{text-align: left;}
+    footer .social{text-align: right;}
+    footer .cols{align-items: center;}
+
+}
+/*footer{
     display: flex;
     align-items: stretch;
     justify-content: space-evenly;
@@ -200,21 +223,15 @@ footer .col{
     flex-direction: row;
     align-items: center;
 }
-footer p{
-    font-size:1.5rem;
-}
-.social{font-size:3rem;}
+
+
 footer .social{
     text-align: right;
     justify-content: flex-end;
 }
-.social a{color: inherit;}
-.social a:hover,
-.social a:focus{
-    color: #84c6ff;
-}
-.social .icon{padding:12px}
 
+.social .icon{padding:12px}
+*/
 /*Espacio*/
 .espacio{
     height:5rem;

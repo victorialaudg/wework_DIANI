@@ -1,19 +1,16 @@
-.cols{display: flex;flex-direction: column;}
-.col.areatxt{order:1;padding:0;}
-.col.areaimg{order:2;}
-
 #contacto form{font-size:1.8rem;}
 
 fieldset{padding:1rem;}
-fieldset legend{padding:0 2rem;font-size:1.8rem;font-weight: 700;}
+fieldset legend{font-size:1.8rem;font-weight: 700;margin-bottom: 1em;}
 fieldset div{margin:2rem auto;}
 form label{margin-right: 1rem;text-transform: uppercase;font-size:1.45rem;}
-form input{
+.form-control{
     border:0;
     outline: 0;
     border-bottom:2px solid #065191;
     width:95%;
     padding:1rem 0 0;
+    border-radius: 0;
 }
 form input[type="radio"]{
     width:auto;
@@ -26,7 +23,7 @@ form input[type="radio"]{
 :-ms-input-placeholder{
     font-size:1.8rem;
 }
-::placeholder,select option{
+::placeholder,select option,.form-select{
     font-size:1.8rem;
 }
 form select{
@@ -35,7 +32,8 @@ form select{
     max-width:300px;
     min-height:45px;
 }
-form textarea{width:97%;}
+.form-check-input{width: 1em !important; cursor: pointer;}
+form textarea.form-control{width:97%;border:1px solid rgb(151, 151, 151);border-radius: .3rem;border-bottom:2px solid #065191;}
 input#limpiar,input#enviar{
     border-radius: 5px;
     min-height: 45px;
@@ -57,11 +55,9 @@ input#limpiar:hover,input#limpiar:focus{
 iframe{width:100%;max-width:595px;}
 
 @media(min-width:768px){
-    .cols{flex-direction: row;align-items: flex-start;}
-    .col.areatxt{order:2;padding:0 2rem;}
-    .col.areaimg{order:1;}
-    .cols.inverse .col.areatxt{padding:0;}
-    .cols.inverse .col.areaimg{padding:0 2rem;}
+    .areamapa .col{width:49.5%;}
+    .areamapa .areaimg{order:2;}
+    .areamapa .areatxt{order:1;}
 }
 @media(min-width:500px){
     form div:not(.w100){

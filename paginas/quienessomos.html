@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../assets/ionicons-2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
@@ -12,15 +13,32 @@
 </head>
 <body id="quienessomos">
     <header>
-        <nav>
-            <a href="../index.html"><img src="../assets/img/logo.jpg" alt="logo" class="logo"></a>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Quiénes somos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="planes.html">Planes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.jpg" alt="logo" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Quiénes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="planes.html">Planes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -33,11 +51,12 @@
                 </div>
             </div>
         </section>
+
         <section data-aos="fade-up" data-aos-delay="500">
             <h2>Lorem ipsum</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id odio non est auctor gravida non ut nulla. Duis lacinia feugiat mollis. Sed congue justo sit amet sapien malesuada scelerisque. Praesent eu lobortis nulla, non rhoncus tellus. Praesent semper odio dictum tristique fringilla.</p>
         </section>
-        <section class="cols">
+        <section class="cuadros cols">
             <div class="col areaimg" data-aos="fade-right" data-aos-delay="300">
                 <img src="../assets/img/quienessomos2.jpg" alt="imagen">
             </div>
@@ -45,7 +64,7 @@
                 <p>Sed mattis arcu non accumsan finibus. Vivamus finibus felis aliquet vehicula porta. Ut dictum vestibulum ante in condimentum. Pellentesque sed quam magna. Nullam volutpat elit ante, at gravida lorem dignissim nec. Praesent maximus vel mi varius interdum. Cras tincidunt metus vitae velit dictum, gravida consequat nisl dictum.</p>
             </div>
         </section>
-        <section class="cols inverse">
+        <section class="cuadros cols inverse">
             <div class="col areaimg" data-aos="fade-left" data-aos-delay="300">
                 <img src="../assets/img/quienessomos3.jpg" alt="imagen">
             </div>
@@ -53,19 +72,21 @@
                 <p>Suspendisse vitae ipsum velit. Suspendisse interdum elit in hendrerit hendrerit. Quisque placerat purus sit amet placerat blandit. Duis aliquam, massa vel sagittis euismod, nibh ex dictum eros, nec malesuada quam ipsum bibendum nisl. Mauris vestibulum nunc sed lectus cursus porta.</p>
             </div>
         </section>
- 
     </main>
     <footer class="bgdark">
-        <div class="col rights">
-            <p>Todos los derechos reservados.</p>
-        </div>
-        <div class="col social">
-            <!--Nota: Dejé los links directos a las redes porque son cuentas inexistentes-->
-            <a href="https://www.linkedin.com" target="_blank"><i class="icon ion-social-linkedin"></i></a>
-            <a href="https://es-la.facebook.com" target="_blank"></a><i class="icon ion-social-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank"></a><i class="icon ion-social-twitter"></i></a>
+        <div class="cols d-flex flex-column flex-sm-row">
+            <div class="rights col-12 col-sm-6">
+                <p>Todos los derechos reservados.</p>
+            </div>
+            <div class="social col-12 col-sm-6">
+                <!--Nota: Dejé los links directos a las redes porque son cuentas inexistentes-->
+                <a href="https://www.linkedin.com" target="_blank"><i class="icon ion-social-linkedin"></i></a>
+                <a href="https://es-la.facebook.com" target="_blank"><i class="icon ion-social-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="icon ion-social-twitter"></i></a>
+            </div>
         </div>
     </footer>
+    <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

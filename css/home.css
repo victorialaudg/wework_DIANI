@@ -49,12 +49,13 @@ section:not(.contenedorapertura),aside{
     text-align:center;
 }
 section.oficinas{max-width:initial;}
-.galeria{
-    padding: 2rem 0 6rem 0;
-}
+.galeria{padding: 2rem 0 6rem 0;}
+.galeria.row>*{padding-left: 0;padding-right: 0;}
+.galeria .col{max-width:500px;}
 .galeria img{
     padding: 0.5rem;
     opacity: 0.4;
+    max-width: 100%;
 }
 .galeria img:hover{
     opacity:1;
