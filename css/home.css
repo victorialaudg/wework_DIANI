@@ -64,7 +64,12 @@ section.oficinas{max-width:initial;}
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-aside .col{padding:6rem 2rem;}
+aside .areatxt{padding:4%;}
 aside img{
     max-width: 100%;
+}
+@media screen and (min-width:768px) {
+    aside .areatxt{padding:0 4% 2% 1%;} 
+    aside .areatxt h2{padding-top:0;padding-bottom:2%;} 
+    aside .cta{margin-top:2%;}
 }
