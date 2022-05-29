@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../assets/ionicons-2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/contacto.css">
     <title>Up! Work - Contacto</title>
 </head>
 <body id="contacto">
@@ -73,15 +72,15 @@
                     <form action="validar.php" method="get" enctype="multipart/form-data">
                         <fieldset>
                             <legend>Completá con tus datos</legend>
-                            <div class="row w100 mb-3">
+                            <div class="row w100 mb-5">
                                 <label for="nombre" class="form-label">Nombre:</label>
                                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Sofía" minlength="3" maxlength="50" required autocomplete="off">
                             </div>
-                            <div class="row w100 mb-3">
+                            <div class="row w100 mb-5">
                                 <label for="apellido" class="form-label">Apellido:</label>
                                 <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Benitez" minlength="3" maxlength="50" required>
                             </div>
-                            <div class="row d-flex flex-row mb-3">
+                            <div class="row d-flex flex-row mb-5">
                                 <div class="col-6"> 
                                     <label for="email" class="form-label">E-mail:</label>
                                     <input type="email" class="form-control" id="email" name="email" placeholder="tumail@mail.com"  required>
@@ -91,7 +90,7 @@
                                     <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="1177779999"  required>
                                 </div>
                             </div>
-                            <div class="row mb-3 w100">
+                            <div class="row mb-5 w100">
                                 <label for="pais" class="form-label">Tu país de residencia:</label>
                                 <select name="pais" id="pais" class="form-select">
                                     <option value="argentina" selected>Argentina</option>
@@ -102,7 +101,7 @@
                                     <option value="uruguay">Uruguay</option>
                                 </select>
                             </div>
-                            <div class="row mb-3">
+                            <div class="row mb-5">
                                 <p>¿Cómo preferís que te contactemos?</p>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="radiotel">
@@ -117,11 +116,11 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="row mb-3 w100">
+                            <div class="row mb-5 w100">
                                 <label for="comentario" class="form-label">Tipeá el motivo de tu consulta:</label><br />
                                 <textarea name="comentario" class="form-control" id="comentario" cols="30" rows="5" placeholder="Escribí aquí..."></textarea><br>
                             </div>
-                            <div class="row mb-3 w100">
+                            <div class="row mb-5 w100">
                                 <input id="limpiar" type="reset" value="Borrar">
                                 <input id="enviar" type="submit" value="Enviar">
                             </div>
