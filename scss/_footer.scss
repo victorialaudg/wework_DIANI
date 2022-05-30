@@ -1,0 +1,19 @@
+/*Footer*/
+footer{
+    padding:1.5rem 1rem;
+    text-align: center;
+    p{
+        font-size:1.5rem;
+        margin:0;
+    }
+    .social{
+        font-size:3rem;
+        a {
+            color: inherit;
+            .icon{margin: 1rem;}
+            &:hover,&:focus{
+                color: $celeste !important;
+            }
+        }  
+    }
+}

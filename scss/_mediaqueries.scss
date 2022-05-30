@@ -1,0 +1,65 @@
+/*Adaptaciones*/
+@media screen and (min-width:500px) {
+    #contacto {
+        form{
+            div:not(.w100){
+                display: inline-block;
+                vertical-align: top;
+            }
+            input#limpiar, input#enviar{
+                display: inline-block;
+                width:47%;
+                vertical-align: middle;
+            }
+            input#limpiar{margin-right: 3%;}
+        }
+    }
+}
+@media screen and (min-width:526px) {
+    footer {
+        .rights{text-align: left;}
+        .social{text-align: right;}
+    }
+}
+@media screen and (min-width:768px) {
+    //Home
+    aside{
+        .areatxt{
+            padding:0 4% 2% 1%;
+            text-align: left !important;
+            h2{
+                padding-top:0;
+                padding-bottom:2%;
+            } 
+        }
+        .cta{margin-top:2%;}
+    }
+    //Contacto
+    #contacto {
+        .areamapa{
+            .col{width:49.5%;}
+            .areaimg{order:2;}
+            .areatxt{order:1;}
+        }
+    }
+    //Quiénes somos
+    #quienessomos {
+        .cuadros.cols{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding:0;
+            .col{
+                width:49.5%;
+                max-width:595px;
+                display: inline-flex;
+                vertical-align: middle;
+                padding:3rem;
+            }
+        }
+        .cuadros.cols.inverse{
+            flex-direction: row-reverse;
+        }
+    }
+}
