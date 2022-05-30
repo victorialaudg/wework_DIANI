@@ -477,6 +477,12 @@ footer {
   background-position: center -50px;
   height: 67vh; }
 
+#contacto .areaimg .social a:hover .icon {
+  color: #84c6ff; }
+
+#contacto .areaimg .social .icon {
+  font-size: 3rem; }
+
 form {
   font-size: 1.8rem; }
 
