@@ -1,3 +1,4 @@
+@import "_mixins";
 @import "_general";
 @import "_header";
 @import "_footer";
@@ -33,12 +34,11 @@
             h2{
                 font-size:2rem;
                 font-weight: normal;
-                padding:0.5rem;
+                @include spaces(5px,0.5rem);
                 background-color:$white;
                 color: $black;
                 display:inline-block;
                 text-transform: uppercase;
-                margin:5px;
             }
         }
     }
@@ -142,10 +142,9 @@
 }
 #servicios .items .card-header{background-color: $white;border:0;}
 #servicios .items h2{
-    padding:0.5rem;
     font-size:2.2rem;
     text-transform:uppercase;
-    margin: 7px 0;
+    @include spaces(7px 0,0.5rem);
 }
 #servicios .items .icon{
     font-size:5rem;
@@ -192,7 +191,12 @@
 #planes tfoot td{
     font-weight: bolder;
 }
-#planes tfoot td .btn{width:100%;font-size:1.5rem;text-transform: uppercase;padding:0.8rem 3rem;margin:1rem auto;}
+#planes tfoot td .btn{
+    width:100%;
+    font-size:1.5rem;
+    text-transform: uppercase;
+    @include spaces(1rem auto,0.8rem 3rem);
+}
 #planes tfoot td .btn.btn-light:hover,tfoot td .btn.btn-light:focus{background-color: #222;color: $white;}
 #planes section:not(.contenedorapertura){text-align: center;padding:25px 10px;}
 
@@ -262,7 +266,7 @@ form select{
 }
 .form-check-input{width: 1em !important; cursor: pointer;}
 form textarea.form-control{width:97%;border:1px solid rgb(151, 151, 151);border-radius: .3rem;border-bottom:2px solid $azul;}
-#contacto input#limpiar,#contacto input#enviar{
+.limpiar{
     border-radius: 5px;
     min-height: 45px;
     line-height: 45px;
@@ -271,11 +275,15 @@ form textarea.form-control{width:97%;border:1px solid rgb(151, 151, 151);border-
     text-transform: uppercase;
     padding:0;
 }
-#contacto input#enviar{background-color: $azul; color:$white;}
-#contacto input#enviar:hover,#contacto input#enviar:focus{
+.enviar{
+    @extend .limpiar;
+    background-color: $azul;
+    color:$white;
+}
+.enviar:hover,.enviar:focus{
     background-color: #012747;
 }
-#contacto input#limpiar:hover,#contacto input#limpiar:focus{
+.limpiar:hover,.limpiar:focus{
     background-color: #b8b8b8;
 }
 #contacto .social a:not(:first-of-type){padding-left:2rem;}

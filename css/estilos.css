@@ -259,12 +259,12 @@ footer {
     #home .apertura .apertura__text h2 {
       font-size: 2rem;
       font-weight: normal;
+      margin: 5px;
       padding: 0.5rem;
       background-color: #fff;
       color: #000;
       display: inline-block;
-      text-transform: uppercase;
-      margin: 5px; }
+      text-transform: uppercase; }
 
 #home .bajada {
   font-size: 2.2rem;
@@ -369,10 +369,10 @@ footer {
   border: 0; }
 
 #servicios .items h2 {
-  padding: 0.5rem;
   font-size: 2.2rem;
   text-transform: uppercase;
-  margin: 7px 0; }
+  margin: 7px 0;
+  padding: 0.5rem; }
 
 #servicios .items .icon {
   font-size: 5rem;
@@ -424,8 +424,8 @@ footer {
   width: 100%;
   font-size: 1.5rem;
   text-transform: uppercase;
-  padding: 0.8rem 3rem;
-  margin: 1rem auto; }
+  margin: 1rem auto;
+  padding: 0.8rem 3rem; }
 
 #planes tfoot td .btn.btn-light:hover, tfoot td .btn.btn-light:focus {
   background-color: #222;
@@ -542,7 +542,7 @@ form textarea.form-control {
   border-radius: .3rem;
   border-bottom: 2px solid #065191; }
 
-#contacto input#limpiar, #contacto input#enviar {
+.limpiar, .enviar {
   border-radius: 5px;
   min-height: 45px;
   line-height: 45px;
@@ -551,14 +551,14 @@ form textarea.form-control {
   text-transform: uppercase;
   padding: 0; }
 
-#contacto input#enviar {
+.enviar {
   background-color: #065191;
   color: #fff; }
 
-#contacto input#enviar:hover, #contacto input#enviar:focus {
+.enviar:hover, .enviar:focus {
   background-color: #012747; }
 
-#contacto input#limpiar:hover, #contacto input#limpiar:focus {
+.limpiar:hover, .enviar:hover, .limpiar:focus, .enviar:focus {
   background-color: #b8b8b8; }
 
 #contacto .social a:not(:first-of-type) {

@@ -11,8 +11,7 @@ $fontFamily:'Lato',sans-serif;
 $bgLight:#d6d6d6;
 
 *{
-    margin:0;
-    padding:0;
+    @include spaces(0,0);
     box-sizing:border-box;
 }
 html{
@@ -34,23 +33,29 @@ html{
 
 /*Estilos compartidos por todas las páginas*/
 h1,h2,h3,h4,h5,h6{font-weight: bold;}
+
+$fontSizes: (
+    1-6r:1.6rem,
+    1-8r:1.8rem,
+    2-8r:2.8rem,
+    3-7r:3.7rem
+);
 h2{
-    font-size:3.7rem;
+    font-size: map-get($fontSizes,3-7r);
     padding-top:2rem;
     padding-bottom:2rem;
 }
 .subtitulo{
-    font-size:2.8rem;
+    font-size: map-get($fontSizes,2-8r);
     padding:2rem 0;
 }
 section p,aside p{
-    font-size:1.8rem;
+    font-size: map-get($fontSizes,1-8r);
     line-height: 1.5;
 }
 .contenido,section:not(.contenedorapertura){
     max-width:1200px;
-    margin:auto;
-    padding: 5rem 2rem;
+    @include spaces(auto,5rem 2rem);
 }
 aside{padding: 6rem 0;}
 .bgdark{
@@ -68,9 +73,8 @@ aside{padding: 6rem 0;}
     width:90%;
     max-width:320px;
     border-radius: 5px;
-    margin:3rem auto;
-    padding:5px 10px;
-    font-size:1.6rem;
+    @include spaces(3rem auto,5px 10px);
+    font-size: map-get($fontSizes,1-6r);
     line-height: 1.6;
     text-transform: uppercase;
     border:0;
