@@ -184,7 +184,16 @@ footer {
       footer .social a:hover, footer .social a:focus {
         color: #84c6ff !important; }
 
-/*Adaptaciones*/
+/*Página Home*/
+#home .apertura {
+  height: 100vh;
+  overflow: hidden; }
+  #home .apertura video {
+    top: 100px;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%; }
+  /*Adaptaciones*/
 @media screen and (min-width: 500px) {
   #contacto form div:not(.w100) {
     display: inline-block;
