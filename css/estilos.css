@@ -184,6 +184,54 @@ footer {
       footer .social a:hover, footer .social a:focus {
         color: #84c6ff !important; }
 
+/*Adaptaciones*/
+@media screen and (min-width: 500px) {
+  #contacto form div:not(.w100) {
+    display: inline-block;
+    vertical-align: top; }
+  #contacto form input#limpiar, #contacto form input#enviar {
+    display: inline-block;
+    width: 47%;
+    vertical-align: middle; }
+  #contacto form input#limpiar {
+    margin-right: 3%; } }
+
+@media screen and (min-width: 526px) {
+  footer .rights {
+    text-align: left; }
+  footer .social {
+    text-align: right; } }
+
+@media screen and (min-width: 768px) {
+  aside .areatxt {
+    padding: 0 4% 2% 1%;
+    text-align: left !important; }
+    aside .areatxt h2 {
+      padding-top: 0;
+      padding-bottom: 2%; }
+  aside .cta {
+    margin-top: 2%; }
+  #contacto .areamapa .col {
+    width: 49.5%; }
+  #contacto .areamapa .areaimg {
+    order: 2; }
+  #contacto .areamapa .areatxt {
+    order: 1; }
+  #quienessomos .cuadros.cols {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0; }
+    #quienessomos .cuadros.cols .col {
+      width: 49.5%;
+      max-width: 595px;
+      display: inline-flex;
+      vertical-align: middle;
+      padding: 3rem; }
+  #quienessomos .cuadros.cols.inverse {
+    flex-direction: row-reverse; } }
+
 /*Página Home*/
 #home .apertura {
   height: 100vh;
@@ -256,7 +304,7 @@ footer {
 
 /*Página Quiénes somos*/
 #quienessomos .aperturabg {
-  background-image: url("../assets/img/quienessomos-sm.jpg");
+  background-image: url("../assets/img/quienessomos.jpg");
   background-position: center;
   height: 65vh; }
 
@@ -298,7 +346,7 @@ footer {
 
 /*Página de Servicios*/
 #servicios .aperturabg {
-  background-image: url("../assets/img/servicios-sm.jpg");
+  background-image: url("../assets/img/servicios.jpg");
   background-position: center;
   height: 67vh; }
 
@@ -332,7 +380,7 @@ footer {
 
 /*Página Planes*/
 #planes .aperturabg {
-  background-image: url("../assets/img/planes-sm.jpg");
+  background-image: url("../assets/img/planes.jpg");
   background-position: center;
   height: 67vh; }
 
@@ -425,7 +473,7 @@ footer {
 
 /*Página Contacto*/
 #contacto .aperturabg {
-  background-image: url("../assets/img/contacto-sm.jpg");
+  background-image: url("../assets/img/contacto.jpg");
   background-position: center -50px;
   height: 67vh; }
 
@@ -519,61 +567,3 @@ form textarea.form-control {
 #contacto iframe {
   width: 100%;
   max-width: 595px; }
-
-/*Adaptaciones*/
-@media screen and (min-width: 500px) {
-  #contacto form div:not(.w100) {
-    display: inline-block;
-    vertical-align: top; }
-  #contacto form input#limpiar, #contacto form input#enviar {
-    display: inline-block;
-    width: 47%;
-    vertical-align: middle; }
-  #contacto form input#limpiar {
-    margin-right: 3%; } }
-
-@media screen and (min-width: 526px) {
-  footer .rights {
-    text-align: left; }
-  footer .social {
-    text-align: right; } }
-
-@media screen and (min-width: 600px) {
-  #quienessomos .aperturabg {
-    background-image: url("../assets/img/quienessomos-lg.jpg"); }
-  #servicios .aperturabg {
-    background-image: url("../assets/img/servicios-lg.jpg"); }
-  #planes .aperturabg {
-    background-image: url("../assets/img/planes-lg.jpg"); }
-  #contacto .aperturabg {
-    background-image: url("../assets/img/contacto-lg.jpg"); } }
-
-@media screen and (min-width: 768px) {
-  aside .areatxt {
-    padding: 0 4% 2% 1%;
-    text-align: left !important; }
-    aside .areatxt h2 {
-      padding-top: 0;
-      padding-bottom: 2%; }
-  aside .cta {
-    margin-top: 2%; }
-  #contacto .areamapa .col {
-    width: 49.5%; }
-  #contacto .areamapa .areaimg {
-    order: 2; }
-  #contacto .areamapa .areatxt {
-    order: 1; }
-  #quienessomos .cuadros.cols {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0; }
-    #quienessomos .cuadros.cols .col {
-      width: 49.5%;
-      max-width: 595px;
-      display: inline-flex;
-      vertical-align: middle;
-      padding: 3rem; }
-  #quienessomos .cuadros.cols.inverse {
-    flex-direction: row-reverse; } }
