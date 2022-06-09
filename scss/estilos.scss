@@ -2,7 +2,6 @@
 @import "_general";
 @import "_header";
 @import "_footer";
-@import "_mediaqueries";
 
 /*Página Home*/
 #home {
@@ -91,7 +90,7 @@
 
 /*Página Quiénes somos*/
 #quienessomos .aperturabg{
-    background-image: url('../assets/img/quienessomos.jpg');
+    background-image: url('../assets/img/quienessomos-sm.jpg');
     background-position: center;
     height:65vh;
 }
@@ -126,7 +125,7 @@
 
 /*Página de Servicios*/
 #servicios .aperturabg{
-    background-image: url('../assets/img/servicios.jpg');
+    background-image: url('../assets/img/servicios-sm.jpg');
     background-position: center;
     height:67vh;
 }
@@ -153,7 +152,7 @@
 
 /*Página Planes*/
 #planes .aperturabg{
-    background-image: url('../assets/img/planes.jpg');
+    background-image: url('../assets/img/planes-sm.jpg');
     background-position: center;
     height:67vh;
 }
@@ -224,7 +223,7 @@
 
 /*Página Contacto*/
 #contacto .aperturabg{
-    background-image: url('../assets/img/contacto.jpg');
+    background-image: url('../assets/img/contacto-sm.jpg');
     background-position: center -50px;
     height:67vh;
 }
@@ -289,3 +288,5 @@ form textarea.form-control{width:97%;border:1px solid rgb(151, 151, 151);border-
 #contacto .social a:not(:first-of-type){padding-left:2rem;}
 
 #contacto iframe{width:100%;max-width:595px;}
+
+@import "_mediaqueries";

@@ -21,6 +21,12 @@
         .social{text-align: right;}
     }
 }
+@media screen and (min-width:600px) {
+    #quienessomos .aperturabg{background-image: url('../assets/img/quienessomos-lg.jpg');}
+    #servicios .aperturabg{background-image: url('../assets/img/servicios-lg.jpg');}
+    #planes .aperturabg{background-image: url('../assets/img/planes-lg.jpg');}
+    #contacto .aperturabg{background-image: url('../assets/img/contacto-lg.jpg');}
+}
 @media screen and (min-width:768px) {
     //Home
     aside{
