@@ -45,6 +45,7 @@
     //Contacto
     #contacto {
         .areaimg,.areatxt,.areamapa .col{width:49.5%;}
+        .areaimg,.areatxt{display: inline-block;vertical-align: top;}
         .areamapa{
             .areaimg{order:2;}
             .areatxt{order:1;}

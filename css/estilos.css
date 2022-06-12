@@ -534,6 +534,9 @@ footer {
     margin-top: 2%; }
   #contacto .areaimg, #contacto .areatxt, #contacto .areamapa .col {
     width: 49.5%; }
+  #contacto .areaimg, #contacto .areatxt {
+    display: inline-block;
+    vertical-align: top; }
   #contacto .areamapa .areaimg {
     order: 2; }
   #contacto .areamapa .areatxt {
