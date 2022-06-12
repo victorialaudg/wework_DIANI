@@ -4,6 +4,7 @@ $white:#fff;
 $black:#000;
 $azul:#065191;
 $azulDark:#07477e;
+$azulDark2:#012747;
 $azulLight:#1e72bc;
 $celeste:#84c6ff;
 $bgGris:#302f2e;
@@ -37,9 +38,14 @@ h1,h2,h3,h4,h5,h6{font-weight: bold;}
 $fontSizes: (
     1-6r:1.6rem,
     1-8r:1.8rem,
+    2r:2rem,
     2-8r:2.8rem,
-    3-7r:3.7rem
+    3-7r:3.7rem,
+    6r:6rem
 );
+
+$heightVH: 100vh;
+
 h2{
     font-size: map-get($fontSizes,3-7r);
     padding-top:2rem;
@@ -70,8 +76,7 @@ aside{padding: 6rem 0;}
 .cta{
     background-color: $azulLight;
     color: $white;
-    width:90%;
-    max-width:320px;
+    @include width_mw(90%,320px);
     border-radius: 5px;
     @include spaces(3rem auto,5px 10px);
     font-size: map-get($fontSizes,1-6r);

@@ -57,8 +57,8 @@
             <h2>Escribinos</h2>
             <p>Dejanos tu consulta y nuestro equipo te contactará a la brevedad. También podés dejarnos aquí el día de prueba que hayas elegido, o cambiar tu día <i>free</i> mensual.</p>
             <div class="espacio"></div>
-            <div class="row">
-                <div class="col col-md-6 areaimg">
+            <div class="content">
+                <div class="col areaimg">
                     <img src="../assets/img/ofi01.jpg" alt="imagen de oficina">
                     <br>
                     <h3 class="subtitulo">Seguinos en nuestras redes</h3>
@@ -70,7 +70,7 @@
                         <a href="https://twitter.com" target="_blank"><i class="icon ion-social-twitter azul"></i></a>
                     </div>
                 </div>
-                <div class="col col-md-6 areatxt">
+                <div class="col areatxt">
                     <form action="validar.php" method="get" enctype="multipart/form-data">
                         <fieldset>
                             <legend>Completá con tus datos</legend>
@@ -82,7 +82,7 @@
                                 <label for="apellido" class="form-label">Apellido:</label>
                                 <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Benitez" minlength="3" maxlength="50" required>
                             </div>
-                            <div class="row d-flex flex-row mb-5">
+                            <div class="row d-flex flex-row mb-5 w100">
                                 <div class="col-6"> 
                                     <label for="email" class="form-label">E-mail:</label>
                                     <input type="email" class="form-control" id="email" name="email" placeholder="tumail@mail.com"  required>
@@ -103,7 +103,7 @@
                                     <option value="uruguay">Uruguay</option>
                                 </select>
                             </div>
-                            <div class="row mb-5">
+                            <div class="row mb-5 w100">
                                 <p>¿Cómo preferís que te contactemos?</p>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="radiotel">
@@ -120,7 +120,7 @@
                             </div>
                             <div class="row mb-5 w100">
                                 <label for="comentario" class="form-label">Tipeá el motivo de tu consulta:</label><br />
-                                <textarea name="comentario" class="form-control" id="comentario" cols="30" rows="5" placeholder="Escribí aquí..."></textarea><br>
+                                <textarea name="comentario" class="form-control" id="comentario" cols="30" rows="4" placeholder="Escribí aquí..."></textarea><br>
                             </div>
                             <div class="row mb-5 w100">
                                 <input id="limpiar" class="limpiar" type="reset" value="Borrar">

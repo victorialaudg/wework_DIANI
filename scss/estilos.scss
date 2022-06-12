@@ -6,7 +6,7 @@
 /*Página Home*/
 #home {
     .apertura{
-        height: 100vh;
+        height: $heightVH;
         overflow: hidden;
         video{
             top: 100px;
@@ -23,15 +23,14 @@
             position: absolute;
             top:250px;
             left:5%;
-            width:90%;
-            max-width: 500px;
+            @include width_mw(90%,500px);
             min-height: 170px;
             transition:height 2s;
             h1{
-                font-size:6rem;
+                font-size: map-get($fontSizes,6r);
             }
             h2{
-                font-size:2rem;
+                font-size: map-get($fontSizes,2r);
                 font-weight: normal;
                 @include spaces(5px,0.5rem);
                 background-color:$white;
@@ -84,29 +83,22 @@
         }
     }
 }
-//FIN HOME
-
-
+/*FIN HOME*/
 
 /*Página Quiénes somos*/
 #quienessomos {
     .aperturabg{
-        background-image: url('../assets/img/quienessomos-sm.jpg');
-        background-position: center;
-        height:65vh;
+        @include apertura(url('../assets/img/quienessomos-sm.jpg'),center,$heightVH - 35);
     }
-    /*Cols Quiénes somos*/
     .cuadros{
         .col{
-            width:100%;
-            max-width:595px;
+            @include width_mw(100%,595px);
             padding:3rem;
         }
         .col.areaimg{
             padding:0;
             img{
-                width:100%;
-                max-width:100%;
+                @include width_mw(100%,100%);
             }
         }
         .col.areatxt{
@@ -119,181 +111,257 @@
     background-color:$black;
     color: $white;
     padding:5rem 2rem;
+    h1{
+        font-size:5em;
+        margin:0 auto 0.3em auto;
+    }
+    h1 + p{
+        font-size: map-get($fontSizes,2r);
+        margin:0 0 1.5rem 0;
+        line-height: 1.35;
+    }
+    div{
+        @include width_mw(95%,1200px);
+        margin:auto;
+    }
 }
-.aperturaintro h1{
-    font-size:5em;
-    margin:0 auto 0.3em auto;
-}
-.aperturaintro h1 + p{font-size:2rem;margin:0 0 1.5rem 0;line-height: 1.35;}
-.aperturaintro div{width:95%;max-width:1200px;margin:auto;}
-
-
-
 
 /*Página de Servicios*/
-#servicios .aperturabg{
-    background-image: url('../assets/img/servicios-sm.jpg');
-    background-position: center;
-    height:67vh;
-}
-#servicios .items{max-width:1200px;margin:30px auto;text-align: center;}
-#servicios .items .card{
-    text-align: center;
-    width:95%;
-    max-width:350px;
-    padding:15px 10px 25px;
-    display: inline-block;
-    margin:20px 10px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-}
-#servicios .items .card-header{background-color: $white;border:0;}
-#servicios .items h2{
-    font-size:2.2rem;
-    text-transform:uppercase;
-    @include spaces(7px 0,0.5rem);
-}
-#servicios .items .icon{
-    font-size:5rem;
-    color: $azul;
+#servicios{
+    .aperturabg{
+        @include apertura(url('../assets/img/servicios-sm.jpg'),center,$heightVH - 33);
+    }
+    .items{
+        max-width:1200px;
+        margin:30px auto;
+        text-align: center;
+        .card{
+            text-align: center;
+            @include width_mw(95%,350px);
+            padding:15px 10px 25px;
+            display: inline-block;
+            margin:20px 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+        .card-header{
+            background-color: $white;
+            border:0;
+        }
+        h2{
+            font-size:2.2rem;
+            text-transform:uppercase;
+            @include spaces(7px 0,0.5rem);
+        }
+        .icon{
+            font-size:5rem;
+            color: $azul;
+        }
+    }
 }
 
 /*Página Planes*/
-#planes .aperturabg{
-    background-image: url('../assets/img/planes-sm.jpg');
-    background-position: center;
-    height:67vh;
+#planes{
+    .aperturabg{
+        @include apertura(url('../assets/img/planes-sm.jpg'),center,$heightVH - 33);
+    }
+    table{
+        border:1px solid $black;
+        color: $white;
+        @include width_mw(100%,900px);
+        border-collapse: collapse;
+        th,td{
+            border: 1px solid;
+            padding:1.5%;
+        }
+        td{
+            font-size:1.65rem;
+            .icon{
+                margin-right: 1rem;
+            }
+            .icon.ion-close-round{
+                color: $black;
+            }
+        }
+        td.desactivada{
+            background-color: #465e72;
+        }
+        td:first-of-type,
+        th:first-of-type{
+            background-color: #006dcb;
+        }
+        td:nth-of-type(2),
+        th:nth-of-type(2){
+            background-color: $azul;
+        }
+        td:last-of-type,
+        th:last-of-type{
+            background-color: $black;
+        }
+        th,tfoot td{
+            font-size:1.85rem;
+            letter-spacing: 1px;;
+        }
+        tfoot td{
+            font-weight: bolder;
+            .btn{
+                width:100%;
+                font-size:1.5rem;
+                text-transform: uppercase;
+                @include spaces(1rem auto,0.8rem 3rem);
+            }
+            .btn.btn-light{
+                &:hover{
+                    background-color: #222;
+                    color: $white;
+                    }
+                &:focus{
+                    background-color: #222;
+                    color: $white;
+                    }
+            }
+        }
+    }
+    caption{
+        font-size:1.55rem;
+        margin:2rem auto;
+        font-weight: bold;
+        color: $azul;
+    }
+    caption,th{
+        text-transform:uppercase;
+    }
+    section:not(.contenedorapertura){
+        text-align: center;
+        padding:25px 10px;
+    }
+    .accordion-header,.accordion-body,.accordion-button{
+        background-color: #e7f1ff;
+    }
+    .accordion-header{
+        .accordion-button{
+            font-size:1.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow:0!important;
+        }
+        h2{
+            padding-top: 0;
+        }
+    }
+    .accordion-body{
+        font-size:1.65rem;
+        padding-bottom:2.5rem;
+        a{
+            color: $azul;
+        }
+    }
 }
-#planes table{
-    border:1px solid $black;
-    color: $white;
-    width:100%;
-    max-width:900px;
-    border-collapse: collapse;
-}
-#planes caption{
-    font-size:1.55rem;
-    margin:2rem auto;
-    font-weight: bold;
-    color: $azul;
-}
-#planes caption,#planes th{
-    text-transform:uppercase;
-}
-#planes table th,#planes table td{
-    border: 1px solid;
-    padding:1.5%;
-}
-#planes table td{
-    font-size:1.65rem;
-}
-#planes table td .icon{
-    margin-right: 1rem;
-}
-#planes table td .icon.ion-close-round{color: $black;}
-#planes table th,#planes tfoot td{
-    font-size:1.85rem;
-    letter-spacing: 1px;;
-}
-#planes tfoot td{
-    font-weight: bolder;
-}
-#planes tfoot td .btn{
-    width:100%;
-    font-size:1.5rem;
-    text-transform: uppercase;
-    @include spaces(1rem auto,0.8rem 3rem);
-}
-#planes tfoot td .btn.btn-light:hover,tfoot td .btn.btn-light:focus{background-color: #222;color: $white;}
-#planes section:not(.contenedorapertura){text-align: center;padding:25px 10px;}
-
-#planes table td:first-of-type,
-#planes table th:first-of-type{
-    background-color: #006dcb;
-}
-#planes table td:nth-of-type(2),
-#planes table th:nth-of-type(2){
-    background-color: $azul;
-}
-#planes table td:last-of-type,
-#planes table th:last-of-type{
-    background-color: $black;
-}
-#planes table td.desactivada{
-    background-color: #465e72;
-}
-#planes .accordion-header,#planes .accordion-body,#planes .accordion-button{background-color: #e7f1ff;}
-#planes .accordion-header .accordion-button{font-size:1.5rem;text-transform: uppercase;font-weight: bold;}
-#planes .accordion-button{box-shadow:0!important;}
-#planes .accordion-body{font-size:1.65rem;padding-bottom:2.5rem;}
-#planes .accordion-header h2{padding-top: 0;}
-#planes .accordion a{color: $azul;}
 
 /*Página Contacto*/
-#contacto .aperturabg{
-    background-image: url('../assets/img/contacto-sm.jpg');
-    background-position: center -50px;
-    height:67vh;
+#contacto{
+    .aperturabg{
+        @include apertura(url('../assets/img/contacto-sm.jpg'),center -50px,$heightVH - 33);
+    }
+    .content{padding:15px;}
+    .areaimg{
+        .social{
+            a{
+                &:hover{
+                    .icon{color: $celeste;}
+                }
+                &:not(:first-of-type){
+                    padding-left:2rem;
+                }
+            }
+            .icon{font-size: 3rem;}
+        }
+    }
+    iframe{
+        @include width_mw(100%,595px);
+    }
+    form{
+        font-size:1.8rem;
+        fieldset{
+            padding:1rem;
+            legend{
+                font-size:1.8rem;
+                font-weight: 700;
+                margin-bottom: 1.5em;
+            }
+            div{
+                margin:2rem auto;
+                .form-label{
+                    margin-right:1rem;
+                    padding-left: 0;
+                    text-transform: uppercase;
+                    font-size:1.45rem;
+                }
+                .form-control{
+                    border:0;
+                    outline: 0;
+                    border-bottom:2px solid $azul;
+                    width:95%;
+                    padding:1rem 0 0;
+                    border-radius: 0;
+                    font-size:1em!important;
+                }
+                input[type="radio"]{
+                    width:auto;
+                    margin-left: 1rem;
+                    margin-right: 2rem;
+                }
+                ::-webkit-input-placeholder,
+                :-ms-input-placeholder,
+                ::placeholder,
+                select option,
+                .form-select{
+                    font-size: 1.8rem;
+                }
+                select{
+                    display: block;
+                    @include width_mw(100%,300px);
+                    min-height:45px;
+                    font-size: 1.8rem !important;
+                }
+                .form-check-input{
+                    width: 1em !important; 
+                    cursor: pointer;
+                }
+                textarea.form-control{
+                    width:97%;
+                    border:1px solid rgb(151, 151, 151);
+                    border-radius: .3rem;
+                    border-bottom:2px solid $azul;
+                    padding:0.5rem;
+                }
+                .limpiar{
+                    border-radius: 5px;
+                    min-height: 45px;
+                    line-height: 45px;
+                    border:0;
+                    font-size:1.45rem;
+                    text-transform: uppercase;
+                    padding:0;
+                    &:hover{
+                        background-color: #b8b8b8;
+                    }
+                    &:focus{
+                        background-color: #b8b8b8;
+                    }
+                }
+                .enviar{
+                    @extend .limpiar;
+                    background-color: $azul;
+                    color:$white;
+                    &:hover{
+                        background-color: $azulDark2;
+                    }
+                    &:focus{
+                        background-color: $azulDark2;
+                    }
+                }
+            }
+        }
+    }
 }
-#contacto .areaimg .social a:hover .icon{color: $celeste;}
-#contacto .areaimg .social .icon{font-size: 3rem;}
-form{font-size:1.8rem;}
-fieldset{padding:1rem;}
-fieldset legend{font-size:1.8rem;font-weight: 700;margin-bottom: 1em;}
-fieldset div{margin:2rem auto;}
-.form-label{margin-right:1rem;padding-left: 0;text-transform: uppercase;font-size:1.45rem;}
-.form-control{
-    border:0;
-    outline: 0;
-    border-bottom:2px solid $azul;
-    width:95%;
-    padding:1rem 0 0;
-    border-radius: 0;
-    font-size:1em!important;
-}
-form input[type="radio"]{
-    width:auto;
-    margin-left: 1rem;
-    margin-right: 2rem;
-}
-::-webkit-input-placeholder{
-    font-size:1.8rem;
-}
-:-ms-input-placeholder{
-    font-size:1.8rem;
-}
-::placeholder,select option,.form-select{
-    font-size:1.8rem;
-}
-form select{
-    display: block;
-    width:100%;
-    max-width:300px;
-    min-height:45px;
-}
-.form-check-input{width: 1em !important; cursor: pointer;}
-form textarea.form-control{width:97%;border:1px solid rgb(151, 151, 151);border-radius: .3rem;border-bottom:2px solid $azul;}
-.limpiar{
-    border-radius: 5px;
-    min-height: 45px;
-    line-height: 45px;
-    border:0;
-    font-size:1.45rem;
-    text-transform: uppercase;
-    padding:0;
-}
-.enviar{
-    @extend .limpiar;
-    background-color: $azul;
-    color:$white;
-}
-.enviar:hover,.enviar:focus{
-    background-color: #012747;
-}
-.limpiar:hover,.limpiar:focus{
-    background-color: #b8b8b8;
-}
-#contacto .social a:not(:first-of-type){padding-left:2rem;}
-
-#contacto iframe{width:100%;max-width:595px;}
-
 @import "_mediaqueries";

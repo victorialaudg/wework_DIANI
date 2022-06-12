@@ -5,6 +5,8 @@
             div:not(.w100){
                 display: inline-block;
                 vertical-align: top;
+                width: 49%;
+                padding-left:0;
             }
             input#limpiar, input#enviar{
                 display: inline-block;
@@ -42,8 +44,8 @@
     }
     //Contacto
     #contacto {
+        .areaimg,.areatxt,.areamapa .col{width:49.5%;}
         .areamapa{
-            .col{width:49.5%;}
             .areaimg{order:2;}
             .areatxt{order:1;}
         }
@@ -57,8 +59,7 @@
             justify-content: center;
             padding:0;
             .col{
-                width:49.5%;
-                max-width:595px;
+                @include width_mw(49.5%,595px);
                 display: inline-flex;
                 vertical-align: middle;
                 padding:3rem;

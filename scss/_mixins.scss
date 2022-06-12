@@ -2,3 +2,12 @@
     margin: $margin;
     padding: $padding;
 }
+@mixin width_mw($width,$max-width){
+    width: $width;
+    max-width: $max-width;
+}
+@mixin apertura($bgimage,$bgpos,$bgheight){
+    background-image: $bgimage;
+    background-position: $bgpos;
+    height: $bgheight;
+}

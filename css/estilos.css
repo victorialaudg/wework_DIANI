@@ -254,44 +254,43 @@ footer {
 #home aside img {
   max-width: 100%; }
 
+/*FIN HOME*/
 /*Página Quiénes somos*/
-#quienessomos {
-  /*Cols Quiénes somos*/ }
-  #quienessomos .aperturabg {
-    background-image: url("../assets/img/quienessomos-sm.jpg");
-    background-position: center;
-    height: 65vh; }
-  #quienessomos .cuadros .col {
+#quienessomos .aperturabg {
+  background-image: url("../assets/img/quienessomos-sm.jpg");
+  background-position: center;
+  height: 65vh; }
+
+#quienessomos .cuadros .col {
+  width: 100%;
+  max-width: 595px;
+  padding: 3rem; }
+
+#quienessomos .cuadros .col.areaimg {
+  padding: 0; }
+  #quienessomos .cuadros .col.areaimg img {
     width: 100%;
-    max-width: 595px;
-    padding: 3rem; }
-  #quienessomos .cuadros .col.areaimg {
-    padding: 0; }
-    #quienessomos .cuadros .col.areaimg img {
-      width: 100%;
-      max-width: 100%; }
-  #quienessomos .cuadros .col.areatxt {
-    flex-direction: column; }
+    max-width: 100%; }
+
+#quienessomos .cuadros .col.areatxt {
+  flex-direction: column; }
 
 .aperturaintro {
   text-align: center;
   background-color: #000;
   color: #fff;
   padding: 5rem 2rem; }
-
-.aperturaintro h1 {
-  font-size: 5em;
-  margin: 0 auto 0.3em auto; }
-
-.aperturaintro h1 + p {
-  font-size: 2rem;
-  margin: 0 0 1.5rem 0;
-  line-height: 1.35; }
-
-.aperturaintro div {
-  width: 95%;
-  max-width: 1200px;
-  margin: auto; }
+  .aperturaintro h1 {
+    font-size: 5em;
+    margin: 0 auto 0.3em auto; }
+  .aperturaintro h1 + p {
+    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.35; }
+  .aperturaintro div {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto; }
 
 /*Página de Servicios*/
 #servicios .aperturabg {
@@ -303,29 +302,25 @@ footer {
   max-width: 1200px;
   margin: 30px auto;
   text-align: center; }
-
-#servicios .items .card {
-  text-align: center;
-  width: 95%;
-  max-width: 350px;
-  padding: 15px 10px 25px;
-  display: inline-block;
-  margin: 20px 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); }
-
-#servicios .items .card-header {
-  background-color: #fff;
-  border: 0; }
-
-#servicios .items h2 {
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  margin: 7px 0;
-  padding: 0.5rem; }
-
-#servicios .items .icon {
-  font-size: 5rem;
-  color: #065191; }
+  #servicios .items .card {
+    text-align: center;
+    width: 95%;
+    max-width: 350px;
+    padding: 15px 10px 25px;
+    display: inline-block;
+    margin: 20px 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); }
+  #servicios .items .card-header {
+    background-color: #fff;
+    border: 0; }
+  #servicios .items h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin: 7px 0;
+    padding: 0.5rem; }
+  #servicios .items .icon {
+    font-size: 5rem;
+    color: #065191; }
 
 /*Página Planes*/
 #planes .aperturabg {
@@ -339,6 +334,43 @@ footer {
   width: 100%;
   max-width: 900px;
   border-collapse: collapse; }
+  #planes table th, #planes table td {
+    border: 1px solid;
+    padding: 1.5%; }
+  #planes table td {
+    font-size: 1.65rem; }
+    #planes table td .icon {
+      margin-right: 1rem; }
+    #planes table td .icon.ion-close-round {
+      color: #000; }
+  #planes table td.desactivada {
+    background-color: #465e72; }
+  #planes table td:first-of-type,
+  #planes table th:first-of-type {
+    background-color: #006dcb; }
+  #planes table td:nth-of-type(2),
+  #planes table th:nth-of-type(2) {
+    background-color: #065191; }
+  #planes table td:last-of-type,
+  #planes table th:last-of-type {
+    background-color: #000; }
+  #planes table th, #planes table tfoot td {
+    font-size: 1.85rem;
+    letter-spacing: 1px; }
+  #planes table tfoot td {
+    font-weight: bolder; }
+    #planes table tfoot td .btn {
+      width: 100%;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin: 1rem auto;
+      padding: 0.8rem 3rem; }
+    #planes table tfoot td .btn.btn-light:hover {
+      background-color: #222;
+      color: #fff; }
+    #planes table tfoot td .btn.btn-light:focus {
+      background-color: #222;
+      color: #fff; }
 
 #planes caption {
   font-size: 1.55rem;
@@ -349,55 +381,9 @@ footer {
 #planes caption, #planes th {
   text-transform: uppercase; }
 
-#planes table th, #planes table td {
-  border: 1px solid;
-  padding: 1.5%; }
-
-#planes table td {
-  font-size: 1.65rem; }
-
-#planes table td .icon {
-  margin-right: 1rem; }
-
-#planes table td .icon.ion-close-round {
-  color: #000; }
-
-#planes table th, #planes tfoot td {
-  font-size: 1.85rem;
-  letter-spacing: 1px; }
-
-#planes tfoot td {
-  font-weight: bolder; }
-
-#planes tfoot td .btn {
-  width: 100%;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  margin: 1rem auto;
-  padding: 0.8rem 3rem; }
-
-#planes tfoot td .btn.btn-light:hover, tfoot td .btn.btn-light:focus {
-  background-color: #222;
-  color: #fff; }
-
 #planes section:not(.contenedorapertura) {
   text-align: center;
   padding: 25px 10px; }
-
-#planes table td:first-of-type,
-#planes table th:first-of-type {
-  background-color: #006dcb; }
-
-#planes table td:nth-of-type(2),
-#planes table th:nth-of-type(2) {
-  background-color: #065191; }
-
-#planes table td:last-of-type,
-#planes table th:last-of-type {
-  background-color: #000; }
-
-#planes table td.desactivada {
-  background-color: #465e72; }
 
 #planes .accordion-header, #planes .accordion-body, #planes .accordion-button {
   background-color: #e7f1ff; }
@@ -405,20 +391,17 @@ footer {
 #planes .accordion-header .accordion-button {
   font-size: 1.5rem;
   text-transform: uppercase;
-  font-weight: bold; }
-
-#planes .accordion-button {
+  font-weight: bold;
   box-shadow: 0 !important; }
-
-#planes .accordion-body {
-  font-size: 1.65rem;
-  padding-bottom: 2.5rem; }
 
 #planes .accordion-header h2 {
   padding-top: 0; }
 
-#planes .accordion a {
-  color: #065191; }
+#planes .accordion-body {
+  font-size: 1.65rem;
+  padding-bottom: 2.5rem; }
+  #planes .accordion-body a {
+    color: #065191; }
 
 /*Página Contacto*/
 #contacto .aperturabg {
@@ -426,102 +409,97 @@ footer {
   background-position: center -50px;
   height: 67vh; }
 
+#contacto .content {
+  padding: 15px; }
+
 #contacto .areaimg .social a:hover .icon {
   color: #84c6ff; }
 
+#contacto .areaimg .social a:not(:first-of-type) {
+  padding-left: 2rem; }
+
 #contacto .areaimg .social .icon {
   font-size: 3rem; }
-
-form {
-  font-size: 1.8rem; }
-
-fieldset {
-  padding: 1rem; }
-
-fieldset legend {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1em; }
-
-fieldset div {
-  margin: 2rem auto; }
-
-.form-label {
-  margin-right: 1rem;
-  padding-left: 0;
-  text-transform: uppercase;
-  font-size: 1.45rem; }
-
-.form-control {
-  border: 0;
-  outline: 0;
-  border-bottom: 2px solid #065191;
-  width: 95%;
-  padding: 1rem 0 0;
-  border-radius: 0;
-  font-size: 1em !important; }
-
-form input[type="radio"] {
-  width: auto;
-  margin-left: 1rem;
-  margin-right: 2rem; }
-
-::-webkit-input-placeholder {
-  font-size: 1.8rem; }
-
-:-ms-input-placeholder {
-  font-size: 1.8rem; }
-
-::placeholder, select option, .form-select {
-  font-size: 1.8rem; }
-
-form select {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  min-height: 45px; }
-
-.form-check-input {
-  width: 1em !important;
-  cursor: pointer; }
-
-form textarea.form-control {
-  width: 97%;
-  border: 1px solid #979797;
-  border-radius: .3rem;
-  border-bottom: 2px solid #065191; }
-
-.limpiar, .enviar {
-  border-radius: 5px;
-  min-height: 45px;
-  line-height: 45px;
-  border: 0;
-  font-size: 1.45rem;
-  text-transform: uppercase;
-  padding: 0; }
-
-.enviar {
-  background-color: #065191;
-  color: #fff; }
-
-.enviar:hover, .enviar:focus {
-  background-color: #012747; }
-
-.limpiar:hover, .enviar:hover, .limpiar:focus, .enviar:focus {
-  background-color: #b8b8b8; }
-
-#contacto .social a:not(:first-of-type) {
-  padding-left: 2rem; }
 
 #contacto iframe {
   width: 100%;
   max-width: 595px; }
 
+#contacto form {
+  font-size: 1.8rem; }
+  #contacto form fieldset {
+    padding: 1rem; }
+    #contacto form fieldset legend {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5em; }
+    #contacto form fieldset div {
+      margin: 2rem auto; }
+      #contacto form fieldset div .form-label {
+        margin-right: 1rem;
+        padding-left: 0;
+        text-transform: uppercase;
+        font-size: 1.45rem; }
+      #contacto form fieldset div .form-control {
+        border: 0;
+        outline: 0;
+        border-bottom: 2px solid #065191;
+        width: 95%;
+        padding: 1rem 0 0;
+        border-radius: 0;
+        font-size: 1em !important; }
+      #contacto form fieldset div input[type="radio"] {
+        width: auto;
+        margin-left: 1rem;
+        margin-right: 2rem; }
+      #contacto form fieldset div ::-webkit-input-placeholder,
+      #contacto form fieldset div :-ms-input-placeholder,
+      #contacto form fieldset div ::placeholder,
+      #contacto form fieldset div select option,
+      #contacto form fieldset div .form-select {
+        font-size: 1.8rem; }
+      #contacto form fieldset div select {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        min-height: 45px;
+        font-size: 1.8rem !important; }
+      #contacto form fieldset div .form-check-input {
+        width: 1em !important;
+        cursor: pointer; }
+      #contacto form fieldset div textarea.form-control {
+        width: 97%;
+        border: 1px solid #979797;
+        border-radius: .3rem;
+        border-bottom: 2px solid #065191;
+        padding: 0.5rem; }
+      #contacto form fieldset div .limpiar, #contacto form fieldset div .enviar {
+        border-radius: 5px;
+        min-height: 45px;
+        line-height: 45px;
+        border: 0;
+        font-size: 1.45rem;
+        text-transform: uppercase;
+        padding: 0; }
+        #contacto form fieldset div .limpiar:hover, #contacto form fieldset div .enviar:hover {
+          background-color: #b8b8b8; }
+        #contacto form fieldset div .limpiar:focus, #contacto form fieldset div .enviar:focus {
+          background-color: #b8b8b8; }
+      #contacto form fieldset div .enviar {
+        background-color: #065191;
+        color: #fff; }
+        #contacto form fieldset div .enviar:hover {
+          background-color: #012747; }
+        #contacto form fieldset div .enviar:focus {
+          background-color: #012747; }
+
 /*Adaptaciones*/
 @media screen and (min-width: 500px) {
   #contacto form div:not(.w100) {
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    width: 49%;
+    padding-left: 0; }
   #contacto form input#limpiar, #contacto form input#enviar {
     display: inline-block;
     width: 47%;
@@ -554,7 +532,7 @@ form textarea.form-control {
       padding-bottom: 2%; }
   aside .cta {
     margin-top: 2%; }
-  #contacto .areamapa .col {
+  #contacto .areaimg, #contacto .areatxt, #contacto .areamapa .col {
     width: 49.5%; }
   #contacto .areamapa .areaimg {
     order: 2; }
