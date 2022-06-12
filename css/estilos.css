@@ -255,10 +255,23 @@ footer {
   max-width: 100%; }
 
 /*Página Quiénes somos*/
-#quienessomos .aperturabg {
-  background-image: url("../assets/img/quienessomos-sm.jpg");
-  background-position: center;
-  height: 65vh; }
+#quienessomos {
+  /*Cols Quiénes somos*/ }
+  #quienessomos .aperturabg {
+    background-image: url("../assets/img/quienessomos-sm.jpg");
+    background-position: center;
+    height: 65vh; }
+  #quienessomos .cuadros .col {
+    width: 100%;
+    max-width: 595px;
+    padding: 3rem; }
+  #quienessomos .cuadros .col.areaimg {
+    padding: 0; }
+    #quienessomos .cuadros .col.areaimg img {
+      width: 100%;
+      max-width: 100%; }
+  #quienessomos .cuadros .col.areatxt {
+    flex-direction: column; }
 
 .aperturaintro {
   text-align: center;
@@ -279,22 +292,6 @@ footer {
   width: 95%;
   max-width: 1200px;
   margin: auto; }
-
-/*Cols Quiénes somos*/
-#quienessomos .cuadros .col {
-  width: 100%;
-  max-width: 595px;
-  padding: 3rem; }
-
-#quienessomos .cuadros .col.areaimg {
-  padding: 0; }
-
-#quienessomos .cuadros .col.areaimg img {
-  width: 100%;
-  max-width: 100%; }
-
-#quienessomos .cuadros .col.areaimg, #quienessomos .cuadros .col.areatxt {
-  flex-direction: column; }
 
 /*Página de Servicios*/
 #servicios .aperturabg {

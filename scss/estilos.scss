@@ -89,10 +89,30 @@
 
 
 /*Página Quiénes somos*/
-#quienessomos .aperturabg{
-    background-image: url('../assets/img/quienessomos-sm.jpg');
-    background-position: center;
-    height:65vh;
+#quienessomos {
+    .aperturabg{
+        background-image: url('../assets/img/quienessomos-sm.jpg');
+        background-position: center;
+        height:65vh;
+    }
+    /*Cols Quiénes somos*/
+    .cuadros{
+        .col{
+            width:100%;
+            max-width:595px;
+            padding:3rem;
+        }
+        .col.areaimg{
+            padding:0;
+            img{
+                width:100%;
+                max-width:100%;
+            }
+        }
+        .col.areatxt{
+            flex-direction: column;
+        }
+    } 
 }
 .aperturaintro{
     text-align: center;
@@ -106,20 +126,7 @@
 }
 .aperturaintro h1 + p{font-size:2rem;margin:0 0 1.5rem 0;line-height: 1.35;}
 .aperturaintro div{width:95%;max-width:1200px;margin:auto;}
-/*Cols Quiénes somos*/
-#quienessomos .cuadros .col{
-    width:100%;
-    max-width:595px;
-    padding:3rem;
-}
-#quienessomos .cuadros .col.areaimg{
-  padding:0;
-}
-#quienessomos .cuadros .col.areaimg img{
-    width:100%;
-    max-width:100%;
-}
-#quienessomos .cuadros .col.areaimg, #quienessomos .cuadros .col.areatxt{flex-direction: column;}
+
 
 
 
