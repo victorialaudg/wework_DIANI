@@ -328,6 +328,18 @@ footer {
   background-position: center;
   height: 67vh; }
 
+#planes .table-responsive {
+  padding-bottom: 0.8rem; }
+  #planes .table-responsive::-webkit-scrollbar {
+    width: 0.5em; }
+  #planes .table-responsive::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #1e72bc;
+    box-shadow: inset 0 0 6px #1e72bc;
+    border-radius: 10px; }
+  #planes .table-responsive::-webkit-scrollbar-thumb {
+    background-color: #012747;
+    border-radius: 10px; }
+
 #planes table {
   border: 1px solid #000;
   color: #fff;
@@ -406,20 +418,20 @@ footer {
 /*Página Contacto*/
 #contacto .aperturabg {
   background-image: url("../assets/img/contacto-sm.jpg");
-  background-position: center -50px;
+  background-position: center 0;
   height: 67vh; }
 
 #contacto .content {
-  padding: 15px; }
+  padding: 20px; }
 
-#contacto .areaimg .social a:hover .icon {
-  color: #84c6ff; }
-
-#contacto .areaimg .social a:not(:first-of-type) {
-  padding-left: 2rem; }
-
-#contacto .areaimg .social .icon {
-  font-size: 3rem; }
+#contacto .areaimg .social {
+  margin-bottom: 2rem; }
+  #contacto .areaimg .social a:hover .icon {
+    color: #84c6ff; }
+  #contacto .areaimg .social a:not(:first-of-type) {
+    padding-left: 2rem; }
+  #contacto .areaimg .social .icon {
+    font-size: 3rem; }
 
 #contacto iframe {
   width: 100%;
@@ -428,9 +440,9 @@ footer {
 #contacto form {
   font-size: 1.8rem; }
   #contacto form fieldset {
-    padding: 1rem; }
+    padding-top: 1.5rem; }
     #contacto form fieldset legend {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 1.5em; }
     #contacto form fieldset div {
@@ -493,6 +505,9 @@ footer {
         #contacto form fieldset div .enviar:focus {
           background-color: #012747; }
 
+#contacto .areamapa {
+  padding-top: 0; }
+
 /*Adaptaciones*/
 @media screen and (min-width: 500px) {
   #contacto form div:not(.w100) {
@@ -532,8 +547,13 @@ footer {
       padding-bottom: 2%; }
   aside .cta {
     margin-top: 2%; }
+  #contacto .introtext {
+    padding-left: 20px;
+    padding-right: 20px; }
   #contacto .areaimg, #contacto .areatxt, #contacto .areamapa .col {
     width: 49.5%; }
+  #contacto .col.areaimg {
+    padding: 10px 20px; }
   #contacto .areaimg, #contacto .areatxt {
     display: inline-block;
     vertical-align: top; }
@@ -552,6 +572,14 @@ footer {
       max-width: 595px;
       display: inline-flex;
       vertical-align: middle;
-      padding: 3rem; }
+      padding: 0; }
+    #quienessomos .cuadros.cols .col.areatxt p {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto; }
   #quienessomos .cuadros.cols.inverse {
     flex-direction: row-reverse; } }
+
+@media screen and (min-width: 1000px) {
+  #contacto .aperturabg {
+    background-position: center -50px; } }

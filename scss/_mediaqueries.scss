@@ -44,7 +44,12 @@
     }
     //Contacto
     #contacto {
+        .introtext{
+            padding-left:20px;
+            padding-right:20px;
+        }
         .areaimg,.areatxt,.areamapa .col{width:49.5%;}
+        .col.areaimg{padding:10px 20px;}
         .areaimg,.areatxt{display: inline-block;vertical-align: top;}
         .areamapa{
             .areaimg{order:2;}
@@ -63,11 +68,23 @@
                 @include width_mw(49.5%,595px);
                 display: inline-flex;
                 vertical-align: middle;
-                padding:3rem;
+                padding:0;
+            }
+            .col.areatxt{
+                p{
+                    width:85%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
         }
         .cuadros.cols.inverse{
             flex-direction: row-reverse;
         }
     }
+}
+@media screen and (min-width:1000px) {
+   #contacto {
+    .aperturabg{background-position: center -50px;}
+   } 
 }
