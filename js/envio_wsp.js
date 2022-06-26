@@ -11,7 +11,7 @@ function mensaje_wsp(){
   var mensaje_final
 
 
-  mensaje_final ="Hola!,%20Mi%20Nombre%20es:%20" + nombre.value +",%20"
+  mensaje_final ="Hola!,%20Mi%20Nombre%20es:%20" + nombre.value +",%20 y mi apellido es:%20" + apellido.value
   mensaje_final = mensaje_final + "%20Mi%20Mail%20es:%20" + email.value
   mensaje_final = mensaje_final + ",%20Soy%20de:%20" + pais.value + ",%20"
   mensaje_final = mensaje_final + "%20mensaje:%20" + comentario.value
