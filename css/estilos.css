@@ -231,7 +231,9 @@ footer {
   max-width: initial; }
 
 #home .galeria {
-  padding: 2rem 0 6rem 0; }
+  padding: 2rem 0 6rem 0;
+  margin-left: auto;
+  margin-right: auto; }
   #home .galeria img {
     padding: 0.5rem;
     opacity: 0.4;
@@ -247,12 +249,15 @@ footer {
   padding-left: 0;
   padding-right: 0; }
 
-#home aside .areatxt {
-  padding: 4%;
-  text-align: center; }
-
-#home aside img {
-  max-width: 100%; }
+#home aside {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  #home aside .areatxt {
+    padding: 4%;
+    text-align: center; }
+  #home aside img {
+    max-width: 100%; }
 
 /*FIN HOME*/
 /*Página Quiénes somos*/
